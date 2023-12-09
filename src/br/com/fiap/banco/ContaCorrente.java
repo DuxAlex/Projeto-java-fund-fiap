@@ -20,10 +20,26 @@ public class ContaCorrente extends Conta {
 		this.chequeEspecial = chequeEspecial;
 	}
 	
-	//FIM DOS GETTERS E SETTERS
-	
 	public double getSaldoDisp() {
 		return super.getSaldo() + chequeEspecial;
 	}
 	
+	//*** FIM DOS GETTERS E SETTERS ***
+	
+	//INICIO METODOS
+	
+	
+	//Sobrescrita para induzir o polimorfismo
+	//ou seja dois metodos com mesmo nome e parametro
+	//porém de formas diferentes
+	//OBS: Precisa marcar o metodo como OVERRIDE
+	
+	@Override
+	public void retirar (double valor) {
+		valor += 10;
+		super.retirar(valor);
+	}
+	
+	
+	//** FIM METODOS ***
 }
