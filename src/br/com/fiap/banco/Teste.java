@@ -4,23 +4,26 @@ public class Teste {
 	
 	public static void main(String[] args) {
 
-		Conta cc = new Conta();
-		cc.depositar(50.0);
-		cc.setAgencia (123);
-		cc.setNumero(321);
-		
-		cc.depositar(1000);
-		System.out.println(cc.getSaldo());
-		
-		Conta poupanca = new Conta(111,222,1000);
-		
-		poupanca.retirar(50);
-		System.out.println(poupanca.getSaldo());
-		
-		/*exemplo de erro nullpointerexcpetion
-		* Conta cc2 = null;
-		*cc2.depositar(1000);
+		/*ContaCorrente cc = new ContaCorrente();
+		cc.setAgencia(1111);
+		cc.setNumero(2222);
+		cc.setTipo("PF");
+		cc.setChequeEspecial(100);
 		*/
+		
+		//USANDO INSTAnCEOF PARA VERIFICAR SE A VARIAVEL É A INSTANCIA DO OBJT ESPERADO
+		
+		Conta conta = new Conta();
+		Conta cc = new ContaCorrente();
+		
+		ContaCorrente c1  = (ContaCorrente) cc;
+		
+		if (conta instanceof ContaCorrente) {
+			ContaCorrente c2 = (ContaCorrente) conta;
+		}
+			
+		
+		
 		
 	}
 }
