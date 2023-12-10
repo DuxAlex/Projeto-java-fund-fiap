@@ -69,14 +69,14 @@ public class Caixa {
 
 		String nome;
 		nome = new String();
-		nome = "maça";
+		nome = "Maça";
 
 		System.out.println(nome);
 
-		String nome2 = new String("Maçã");
+		String nome2 = new String("maça");
 		System.out.println(nome2);
 
-		String nome3 = "maçã";
+		String nome3 = "maça";
 		System.out.println(nome3);
 
 	
@@ -109,7 +109,31 @@ public class Caixa {
 		propaganda += "!";
 		System.out.println(propaganda);
 		
-	
+		//metodos de strings
+		
+		System.out.println(nome.equals(nome2)); //comparação false pq são strings diferentes
+		
+		System.out.println(nome.equalsIgnoreCase(nome2)); // comparação TRUE pq ignora o Case.
+		
+		System.out.println(nome2.equals(nome3)); // comparação TRUE pq são iguais
+		
+		
+		//errado pq procura lugar na memoria não compara de verdd
+		//boolean teste = (nome == nome3);
+		
+		//falso positivo
+		String nome5 = "oi";
+		String nome6 = "oi";
+		
+		boolean teste = (nome5 == nome6 );
+		System.out.println(teste);
+		// nesse caso dá positivo pq o atributo não foi instanciado
+		//ou seja foi apenas armazenado no pull da memoria no cache
+		//ambos estão salvas no mesmo endereço de memoria.
+		
+		
+		
+ 		
 	
 	
 	
